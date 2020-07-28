@@ -3,9 +3,9 @@ import NumberDisplay from "./NumberDisplay";
 
 
 //the timer box component for hour/min/sec
-class Timer extends Component {
-    render() {
-        const {num} = this.props;
+function Timer (props) {
+
+        const {num} = props;
         //the left number of the time
         const left = Math.floor(num / 10) === 0 ? 0 : Math.floor(num / 10);
         //the right number of the time
@@ -17,7 +17,7 @@ class Timer extends Component {
                 <NumberDisplay num={right}/>
             </div>
         );
-    }
+
 }
 
 export default Timer;
